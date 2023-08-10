@@ -8,10 +8,12 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p className='underline text-5xl'>
+      <div className='z-10'>
+        <p className='underline text-5xl min-h-[50em]'>
           Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+        </p>
+        <p>
+          more stuff
         </p>
       </div>
       <Game />

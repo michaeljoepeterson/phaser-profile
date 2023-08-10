@@ -4,8 +4,8 @@ import { BaseScene } from "./scenes/base-scene";
 export class BaseGame{
     game: Phaser.Game;
 
-    constructor() {
-        console.log(window);
+    constructor(container?: HTMLElement) {
+        console.log(container);
         this.game = new Phaser.Game({
             scale: {
                 mode: Phaser.Scale.ENVELOP,
@@ -20,6 +20,8 @@ export class BaseGame{
                 }
             },
             backgroundColor: '#4488aa',
+            parent: container,
+            canvasStyle: 'position: fixed; top: 0',
             scene: BaseScene
         });
     }
