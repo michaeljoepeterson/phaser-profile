@@ -5,15 +5,21 @@ export class BaseGame{
     game: Phaser.Game;
 
     constructor() {
+        console.log(window);
         this.game = new Phaser.Game({
-            width: 800,
-            height: 800,
+            scale: {
+                mode: Phaser.Scale.ENVELOP,
+                autoCenter: Phaser.Scale.CENTER_BOTH,
+                width: 1920,
+                height: 1080,
+            },
             physics: {
                 default: 'arcade',
                 arcade: {
                     gravity: { y: 200 }
                 }
             },
+            backgroundColor: '#4488aa',
             scene: BaseScene
         });
     }
