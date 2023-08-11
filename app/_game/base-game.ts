@@ -22,7 +22,7 @@ export class BaseGame{
             backgroundColor: '#4488aa',
             parent: container,
             canvasStyle: 'position: fixed; top: 0',
-            scene: BaseScene
+            scene: BaseScene,
         });
     }
 }
