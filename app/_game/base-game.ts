@@ -1,12 +1,10 @@
 import Phaser from "phaser";
 import { BaseScene } from "./scenes/base-scene";
-import { ClassType } from "../_models/class-type";
 
 export class BaseGame{
     game: Phaser.Game;
 
-    constructor(container?: HTMLElement, scene: ClassType<Phaser.Scene> = BaseScene) {
-        console.log(container);
+    constructor(container?: HTMLElement, scene: Phaser.Scene = new BaseScene()) {
         this.game = new Phaser.Game({
             scale: {
                 mode: Phaser.Scale.ENVELOP,
@@ -17,6 +15,7 @@ export class BaseGame{
             physics: {
                 default: 'arcade',
                 arcade: {
+                    debug: true,
                     gravity: { y: 200 }
                 }
             },

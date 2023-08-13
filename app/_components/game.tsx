@@ -11,7 +11,7 @@ export const Game = () => {
     useEffect(() => {
         if(window){
             const scene = getScene(selectedScene);
-            const game = new BaseGame(undefined, scene);
+            const game = new BaseGame(undefined, new scene());
         }
     }, [gameContainer]);
 
