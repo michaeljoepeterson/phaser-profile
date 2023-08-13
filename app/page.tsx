@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Game from './_components/game'
+import ClientWrapper from './_components/client-wrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,9 @@ export default function Home() {
           more stuff
         </p>
       </div>
-      <Game />
+      <ClientWrapper>
+        <Game />
+      </ClientWrapper>
     </main>
   )
 }

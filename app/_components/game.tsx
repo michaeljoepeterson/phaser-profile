@@ -7,6 +7,7 @@ import { SceneType, getScene } from "../_models/scenes";
 export const Game = () => {
     const gameContainer = useRef<any>();
     const [selectedScene, setselectedScene] = useState<SceneType>(SceneType.pong);
+
     useEffect(() => {
         if(window){
             const scene = getScene(selectedScene);
