@@ -1,10 +1,11 @@
 import Phaser from "phaser";
 import { BaseScene } from "./scenes/base-scene";
+import { ClassType } from "../_models/class-type";
 
 export class BaseGame{
     game: Phaser.Game;
 
-    constructor(container?: HTMLElement) {
+    constructor(container?: HTMLElement, scene: ClassType<Phaser.Scene> = BaseScene) {
         console.log(container);
         this.game = new Phaser.Game({
             scale: {
@@ -22,7 +23,7 @@ export class BaseGame{
             backgroundColor: '#4488aa',
             parent: container,
             canvasStyle: 'position: fixed; top: 0',
-            scene: BaseScene,
+            scene,
         });
     }
 }

@@ -1,4 +1,4 @@
-import Phaser, { Physics } from "phaser";
+import Phaser from "phaser";
 
 export class BaseScene extends Phaser.Scene{
     shape1: any;
