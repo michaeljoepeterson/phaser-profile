@@ -9,7 +9,7 @@ export class BaseGame{
         console.log(container);
         this.game = new Phaser.Game({
             scale: {
-                mode: Phaser.Scale.ENVELOP,
+                mode: Phaser.Scale.RESIZE,
                 autoCenter: Phaser.Scale.CENTER_BOTH,
                 width: 1920,
                 height: 1080,
