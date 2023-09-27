@@ -11,8 +11,7 @@ export class BaseGame{
             scale: {
                 mode: Phaser.Scale.RESIZE,
                 autoCenter: Phaser.Scale.CENTER_BOTH,
-                width: 1920,
-                height: 1080,
+
             },
             physics: {
                 default: 'arcade',
