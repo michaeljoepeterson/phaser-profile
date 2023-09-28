@@ -7,10 +7,9 @@ export class BaseGame{
     constructor(container?: HTMLElement, scene: Phaser.Scene = new BaseScene()) {
         this.game = new Phaser.Game({
             scale: {
-                mode: Phaser.Scale.ENVELOP,
+                mode: Phaser.Scale.RESIZE,
                 autoCenter: Phaser.Scale.CENTER_BOTH,
-                width: 1920,
-                height: 1080,
+
             },
             physics: {
                 default: 'arcade',
