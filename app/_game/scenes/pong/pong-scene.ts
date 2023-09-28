@@ -9,16 +9,7 @@ export class PongScene extends Phaser.Scene {
     shape1: any;
 
     constructor(){
-        super({
-            physics: {
-                arcade: {
-                    gravity: {
-                        x: 0,
-                        y: 0
-                    }
-                }
-            }
-        });
+        super();
     }
 
     create() {
@@ -59,7 +50,7 @@ export class PongScene extends Phaser.Scene {
         const circleBody = this.ball as Phaser.Types.Physics.Arcade.GameObjectWithDynamicBody;
         circleBody.body.setSize(50, 50, true);
         circleBody.body.velocity.x = 1;
-        circleBody.body.velocity.y = 400;
+        //circleBody.body.velocity.y = 400;
         circleBody.body.collideWorldBounds = true;
     }
 
